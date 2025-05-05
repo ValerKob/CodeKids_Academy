@@ -303,3 +303,20 @@ input:checked + .switch-slider:before {
   stroke-width: 0.25rem;
   transition: 0.2s;
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.card-1 {
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+.card-1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

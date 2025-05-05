@@ -949,24 +949,6 @@
               </div>
             </div>
           </div>
-          <style>
-            .card-container {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-              gap: 2rem;
-              max-width: 1440px;
-              margin: 0 auto;
-              padding: 2rem;
-            }
-            .card-1 {
-              border: 1px solid #e5e7eb;
-              transition: all 0.3s ease;
-            }
-            .card-1:hover {
-              transform: translateY(-5px);
-              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            }
-          </style>
           <!-- Learning Format -->
           <div class="mb-12">
             <h2 class="text-3xl font-heading font-bold mb-6">
@@ -1038,11 +1020,12 @@
                     <span>Поддержка в чате</span>
                   </li>
                 </ul>
-                <button
-                  class="w-full bg-primary-500 text-white py-3 !rounded-button font-medium hover:bg-primary-500/90 transition whitespace-nowrap"
+                <a
+                  href="#contact"
+                  class="w-full text-center bg-primary-500 text-white py-3 !rounded-button font-medium hover:bg-primary-500/90 transition whitespace-nowrap"
                 >
                   Выбрать тариф
-                </button>
+                </a>
                 <p class="text-center text-gray-500 mt-4 text-sm">
                   Попробуйте первое занятие бесплатно
                 </p>
@@ -1151,11 +1134,12 @@
                     <span>Поддержка в чате</span>
                   </li>
                 </ul>
-                <button
-                  class="w-full bg-primary-500 text-white py-3 !rounded-button font-medium hover:bg-primary-500/90 transition whitespace-nowrap"
+                <a
+                  href="#contact"
+                  class="w-full text-center bg-primary-500 text-white py-3 !rounded-button font-medium hover:bg-primary-500/90 transition whitespace-nowrap"
                 >
                   Выбрать тариф
-                </button>
+                </a>
                 <p class="text-center text-gray-500 mt-4 text-sm">
                   Попробуйте первое занятие бесплатно
                 </p>
@@ -1163,6 +1147,22 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section
+      class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-8"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-2">Скидка 20%!</h3>
+        <p class="mb-4">Только до 30 августа при записи на любой курс</p>
+        <a
+          href="#contact"
+          class="inline-block bg-white text-indigo-600 hover:bg-gray-100 px-6 py-2 rounded-lg font-bold transition duration-300"
+        >
+          Получить скидку
+        </a>
       </div>
     </section>
 
