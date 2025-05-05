@@ -391,3 +391,32 @@ setInterval(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 })();
+
+document.querySelectorAll(".toggle-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const container = btn.closest("div").parentElement;
+    const content = container.querySelector(".toggle-content");
+    const inner = content.querySelector(".inner");
+    const icon = btn.querySelector("i");
+
+    if (content.style.height === "0px" || content.style.height === "") {
+      const height = inner.scrollHeight;
+      content.style.height = height + "px";
+      icon.classList.add("rotate-180");
+
+      // После завершения анимации - сбрасываем height, чтобы он подстраивался автоматически
+      setTimeout(() => {
+        content.style.height = "auto";
+      }, 500);
+    } else {
+      // Устанавливаем высоту явно перед обнулением, чтобы анимация сработала
+      content.style.height = inner.scrollHeight + "px";
+
+      // Принудительно перерисовываем (reflow)
+      void content.offsetHeight;
+
+      content.style.height = "0px";
+      icon.classList.remove("rotate-180");
+    }
+  });
+});
