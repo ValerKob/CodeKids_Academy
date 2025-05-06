@@ -420,3 +420,24 @@ document.querySelectorAll(".toggle-btn").forEach((btn) => {
     }
   });
 });
+
+// Проверка и установка темы при загрузке страницы
+if (localStorage.getItem('theme') === 'dark') {
+  document.documentElement.classList.add('dark');
+} else {
+  document.documentElement.classList.remove('dark');
+}
+
+// Обработчик клика по кнопке смены темы
+document.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => {
+      if (btn.querySelector('.fa-moon') || btn.querySelector('.fa-sun')) {
+          document.documentElement.classList.toggle('dark');
+          if (document.documentElement.classList.contains('dark')) {
+              localStorage.setItem('theme', 'dark');
+          } else {
+              localStorage.setItem('theme', 'light');
+          }
+      }
+  });
+});
