@@ -93,14 +93,22 @@
             >Контакты</a
           >
         </nav>
-
-        <a href="#contact" class="hidden md:flex items-center space-x-4">
-          <button
-            class="hidden md:block px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition"
-          >
-            Записаться
+        <div class="flex items-center space-x-4">
+          <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:block"></i>
           </button>
-        </a>
+          <button class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <i class="fas fa-bars"></i>
+          </button>
+          <a href="#contact" class="hidden md:flex items-center space-x-4">
+            <button
+              class="hidden md:block px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition"
+            >
+              Записаться
+            </button>
+          </a>
+        </div>
 
         <!-- Mobile menu button -->
         <div class="md:hidden">
@@ -1867,5 +1875,29 @@
     </div>
     <!-- Scripts JS -->
     <script src="./assets/js/script.js"></script>
+
+    <script>
+    // Проверка и установка темы при загрузке страницы
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+    }
+
+    // Обработчик клика по кнопке смены темы
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.querySelector('.fa-moon') || btn.querySelector('.fa-sun')) {
+                document.documentElement.classList.toggle('dark');
+                if (document.documentElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+        });
+    });
+</script>
+
   </body>
 </html>
