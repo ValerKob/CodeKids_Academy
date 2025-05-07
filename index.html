@@ -10,28 +10,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
+    
     <!-- Style Readdy -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
-    <style>
-      .container {
-        max-width: 1080px;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body
     class="bg-white dark:bg-gray-900 font-sans text-gray-800 dark:text-gray-200"
@@ -93,7 +88,7 @@
             >Контакты</a
           >
         </nav>
-        <div class="flex items-center space-x-4">
+        <div class="hidden md:flex items-center space-x-4">
           <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
               <i class="fas fa-moon dark:hidden"></i>
               <i class="fas fa-sun hidden dark:block"></i>
@@ -108,7 +103,11 @@
         </div>
 
         <!-- Mobile menu button -->
-        <div class="md:hidden">
+        <div class="md:hidden flex items-center space-x-2">
+          <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block"></i>
+          </button>
           <button id="menu-btn" class="hamburger focus:outline-none">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
