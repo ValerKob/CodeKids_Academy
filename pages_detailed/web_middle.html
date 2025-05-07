@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Веб-разработка (Middle) | CodeKids Academy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
     <!-- Style DeepSite -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -17,21 +11,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./../assets/css/style.css" />
-
+    
     <!-- Style Readdy -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
     />
   </head>
   <body
@@ -95,16 +89,26 @@
           >
         </nav>
 
-        <a href="#contact" class="hidden md:flex items-center space-x-4">
-          <button
-            class="hidden md:block px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition"
-          >
-            Записаться
+        <div class="hidden md:flex items-center space-x-4">
+          <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <i class="fas fa-moon text-black dark:hidden"></i>
+            <i class="fas fa-sun text-yellow-400 hidden dark:block"></i>
           </button>
-        </a>
+          <a href="#contact" class="hidden md:flex items-center space-x-4">
+            <button
+              class="hidden md:block px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg font-medium transition"
+            >
+              Записаться
+            </button>
+          </a>
+        </div>
 
         <!-- Mobile menu button -->
-        <div class="md:hidden">
+        <div class="md:hidden flex items-center space-x-2">
+          <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <i class="fas fa-moon dark:hidden"></i>
+            <i class="fas fa-sun hidden dark:block"></i>
+          </button>
           <button id="menu-btn" class="hamburger focus:outline-none">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
@@ -472,7 +476,7 @@
 
     <section class="bg-white dark:bg-gray-900">
       <!-- Программа курса -->
-      <div class="container mx-auto bg-white rounded-lg shadow-sm p-6 mb-8">
+      <div class="container dark:bg-gray-800 mx-auto bg-white rounded-lg shadow-sm p-6 mb-8">
         <h2 class="text-3xl font-bold mb-6">Программа курса</h2>
 
         <div class="space-y-6">
@@ -483,7 +487,7 @@
                 <h3 class="font-semibold">
                   Модуль 1: Погружение в HTML
                 </h3>
-                <p class="text-sm text-gray-600">4 урока • 4 часа</p>
+                <p class="text-sm text-gray-600 dark:text-gray-100">4 урока • 4 часа</p>
               </div>
               <button
                 class="toggle-btn w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-full"
@@ -556,7 +560,7 @@
             <div class="flex justify-between items-start">
               <div>
                 <h3 class="font-semibold">Модуль 2: CSS: стиль, порядок, магия</h3>
-                <p class="text-sm text-gray-600">8 уроков • 8 часов</p>
+                <p class="text-sm text-gray-600 dark:text-gray-100">8 уроков • 8 часов</p>
               </div>
               <button
                 class="toggle-btn w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-full"
@@ -669,7 +673,7 @@
             <div class="flex justify-between items-start">
               <div>
                 <h3 class="font-semibold">Модуль 3: JavaScript с нуля до интерактива</h3>
-                <p class="text-sm text-gray-600">7 уроков • 7 часов</p>
+                <p class="text-sm text-gray-600 dark:text-gray-100">7 уроков • 7 часов</p>
               </div>
               <button
                 class="toggle-btn w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-full"
@@ -772,7 +776,7 @@
             <div class="flex justify-between items-start">
               <div>
                 <h3 class="font-semibold">Модуль 4: Проект: Pixel</h3>
-                <p class="text-sm text-gray-600">4 урока • 4 часа</p>
+                <p class="text-sm text-gray-600 dark:text-gray-100">4 урока • 4 часа</p>
               </div>
               <button
                 class="toggle-btn w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-full"
@@ -844,7 +848,7 @@
             <div class="flex justify-between items-start">
               <div>
                 <h3 class="font-semibold">Модуль 5: Командная разработка и Git</h3>
-                <p class="text-sm text-gray-600">8 уроков • 8 часов</p>
+                <p class="text-sm text-gray-600 dark:text-gray-100">8 уроков • 8 часов</p>
               </div>
               <button
                 class="toggle-btn w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-full"
@@ -954,7 +958,7 @@
     </section>
 
     <section>
-      <div class="container mx-auto bg-white rounded-lg shadow-sm p-6 mb-8">
+      <div class="container mx-auto bg-white rounded-lg shadow-sm p-6 mb-8 dark:bg-gray-800">
         <!-- Learning Format -->
         <div class="mb-12">
           <h2 class="text-3xl font-heading font-bold mb-6">
@@ -962,7 +966,7 @@
           </h2>
           <div class="card-container">
             <!-- Кнопка 1 -->
-            <div class="card-1 bg-white rounded p-6 flex flex-col">
+            <div class="card-1 bg-white rounded p-6 flex flex-col dark:bg-gray-800">
               <h3 class="text-xl font-bold mb-2">Знакомство</h3>
               <div class="text-primary-500 text-2xl font-bold mb-4">
                 Бесплатно
@@ -992,7 +996,7 @@
             </div>
 
             <!-- Кнопка 2 -->
-            <div class="card-1 bg-white rounded p-6 flex flex-col">
+            <div class="card-1 bg-white rounded p-6 flex flex-col dark:bg-gray-800">
               <h3 class="text-xl font-bold mb-2">Одно занятие</h3>
               <div class="text-primary-500 text-2xl font-bold mb-4">
                 750 ₽
@@ -1037,7 +1041,7 @@
               </p>
             </div>
             <!-- Кнопка 3 -->
-            <div class="card-1 bg-white rounded p-6 flex flex-col">
+            <div class="card-1 bg-white rounded p-6 flex flex-col dark:bg-gray-800">
               <h3 class="text-xl font-bold mb-2">Старт</h3>
               <div class="text-primary-500 text-2xl font-bold mb-4">
                 11 250 ₽
@@ -1090,7 +1094,7 @@
               </p>
             </div>
             <!-- Кнопка 4 -->
-            <div class="card-1 bg-white rounded p-6 flex flex-col">
+            <div class="card-1 bg-white rounded p-6 flex flex-col dark:bg-gray-800">
               <h3 class="text-xl font-bold mb-2">Pro</h3>
               <div class="text-primary-500 text-2xl font-bold mb-4">
                 23 250 ₽
@@ -1171,57 +1175,57 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-gray-50">
+     <!-- Contact -->
+     <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-900">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
+          <p class="text-gray-600 max-w-2xl mx-auto dark:text-gray-100">
             Остались вопросы? Напишите нам или запишитесь на бесплатный пробный
             урок
           </p>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-10">
+        <div class="flex flex-col lg:flex-row gap-10 ">
           <div class="lg:w-1/2">
-            <form class="bg-white p-6 rounded-xl shadow-md">
+            <form class="bg-white p-6 rounded-xl shadow-md dark:bg-gray-800">
               <div class="mb-4">
-                <label for="name" class="block text-gray-700 font-medium mb-2"
+                <label for="name" class="dark:text-gray-100 block text-gray-700 font-medium mb-2"
                   >Ваше имя</label
                 >
                 <input
                   type="text"
                   id="name"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  class="w-full dark:bg-gray-800 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
               <div class="mb-4">
-                <label for="email" class="block text-gray-700 font-medium mb-2"
+                <label for="email" class="dark:text-gray-100 block text-gray-700 font-medium mb-2"
                   >Email</label
                 >
                 <input
                   type="email"
                   id="email"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  class="w-full dark:bg-gray-800 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
               <div class="mb-4">
-                <label for="phone" class="block text-gray-700 font-medium mb-2"
+                <label for="phone" class="dark:text-gray-100 block text-gray-700 font-medium mb-2"
                   >Телефон</label
                 >
                 <input
                   type="tel"
                   id="phone"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  class="w-full dark:bg-gray-800 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
               </div>
               <div class="mb-4">
-                <label for="course" class="block text-gray-700 font-medium mb-2"
+                <label for="course" class="dark:text-gray-100 block text-gray-700 font-medium mb-2"
                   >Интересующий курс</label
                 >
                 <select
                   id="course"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  class="dark:text-gray-100 dark:bg-gray-800 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 >
                   <option value="">Выберите курс</option>
                   <option value="scratch">Scratch для начинающих</option>
@@ -1237,13 +1241,13 @@
               <div class="mb-4">
                 <label
                   for="message"
-                  class="block text-gray-700 font-medium mb-2"
+                  class="block dark:text-gray-100 text-gray-700 font-medium mb-2"
                   >Сообщение</label
                 >
                 <textarea
                   id="message"
                   rows="4"
-                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  class="w-full dark:text-gray-100 dark:bg-gray-800 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 ></textarea>
               </div>
               <button
@@ -1256,7 +1260,7 @@
           </div>
 
           <div class="lg:w-1/2">
-            <div class="bg-white p-6 rounded-xl shadow-md h-full">
+            <div class="dark:bg-gray-800 bg-white p-6 rounded-xl shadow-md h-full">
               <h3 class="text-xl font-bold mb-6">Контактная информация</h3>
 
               <div class="space-y-4 mb-8">
@@ -1266,7 +1270,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium">Адрес</h4>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 dark:text-gray-100">
                       г. Архангельск, ул. Карпогорская, 36
                     </p>
                   </div>
@@ -1278,7 +1282,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium">Телефон</h4>
-                    <p class="text-gray-600">+7 (960) 000-46-12</p>
+                    <p class="text-gray-600 dark:text-gray-100">+7 (960) 000-46-12</p>
                   </div>
                 </div>
 
@@ -1288,7 +1292,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium">Email</h4>
-                    <p class="text-gray-600">valer.kobelev2017@yandex.ru</p>
+                    <p class="text-gray-600 dark:text-gray-100">valer.kobelev2017@yandex.ru</p>
                   </div>
                 </div>
 
@@ -1298,7 +1302,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium">Режим работы</h4>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 dark:text-gray-100">
                       Пн-Пт: 10:00 - 20:00<br />Сб-Вс: 10:00 - 18:00
                     </p>
                   </div>
@@ -1351,11 +1355,11 @@
     </section>
 
     <!-- Payment Methods -->
-    <section class="py-12 bg-white">
+    <section class="py-12 bg-white dark:bg-gray-800">
       <div class="container mx-auto px-4">
         <div class="text-center mb-8">
           <h3 class="text-xl font-bold mb-2">Способы оплаты</h3>
-          <p class="text-gray-600 max-w-2xl mx-auto">
+          <p class="text-gray-600 max-w-2xl mx-auto dark:text-gray-100">
             Мы принимаем все популярные способы оплаты
           </p>
         </div>
