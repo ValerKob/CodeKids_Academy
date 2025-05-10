@@ -316,7 +316,7 @@ const slides = [
     title: "Программирование — суперсила будущего!",
     text: "Современные курсы для детей от 7 до 18 лет. Развиваем мышление и творчество.",
     image:
-      "https://img.freepik.com/free-photo/young-student-studying-online-through-laptop-new-normal-digital-remix_53876-110814.jpg",
+      "./../images/main/slider/slider_1.jpg",
   },
   {
     title: "Создавай игры и сайты с нуля!",
