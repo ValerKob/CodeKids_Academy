@@ -271,7 +271,7 @@ const slides = [
     title: "Твое IT-будущее начинается здесь!",
     text: "Интерактивные курсы, реальные проекты, поддержка преподавателя.",
     image:
-      "https://img.freepik.com/free-photo/kids-working-together-laptop_23-2148761989.jpg?t=st=1746464337~exp=1746467937~hmac=5a9cf89ea55816a1cd22a169e877b36f0dd3db1b7a81fd002a7af15c20011d96&w=1380",
+      "./assets/images/main/slider/slider_3.jpg",
   },
 ];
 
