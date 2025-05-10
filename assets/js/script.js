@@ -73,29 +73,21 @@ menuBtn.addEventListener("click", () => {
 });
 
 // FAQ accordion
-const faqButtons = document.querySelectorAll("#faq button");
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector('i');
 
-faqButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const faqItem = button.parentElement;
-    const content = button.nextElementSibling;
-    const icon = button.querySelector("i");
-
-    // Toggle content visibility
-    content.classList.toggle("hidden");
-
-    // Rotate icon
-    icon.classList.toggle("rotate-180");
-
-    // Close other items
-    faqButtons.forEach((otherButton) => {
-      if (otherButton !== button) {
-        otherButton.nextElementSibling.classList.add("hidden");
-        otherButton.querySelector("i").classList.remove("rotate-180");
-      }
-    });
+    if (content.style.height === '0px' || !content.style.height) {
+      content.style.height = content.scrollHeight + 'px';
+      icon.classList.add('rotate-180');
+    } else {
+      content.style.height = '0';
+      icon.classList.remove('rotate-180');
+    }
   });
 });
+
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -167,55 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mobileMenuButton.addEventListener("click", function () {
     mobileMenu.classList.toggle("hidden");
-  });
-
-  // Аккордеон FAQ
-  const accordionHeaders = document.querySelectorAll(".accordion-header");
-
-  accordionHeaders.forEach((header) => {
-    header.addEventListener("click", function () {
-      const content = this.nextElementSibling;
-      const icon = this.querySelector(".accordion-icon");
-
-      content.classList.toggle("active");
-      icon.style.transform = content.classList.contains("active")
-        ? "rotate(180deg)"
-        : "rotate(0)";
-    });
-  });
-
-  // Слайдер отзывов
-  const reviewsTrack = document.querySelector(".reviews-track");
-  const reviewSlides = document.querySelectorAll(".review-slide");
-  const prevButton = document.querySelector(".review-prev");
-  const nextButton = document.querySelector(".review-next");
-
-  let currentIndex = 0;
-  const slidesToShow =
-    window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-  const slideWidth = 100 / slidesToShow;
-  const maxIndex = reviewSlides.length - slidesToShow;
-
-  reviewSlides.forEach((slide) => {
-    slide.style.width = `${slideWidth}%`;
-  });
-
-  function updateSlider() {
-    reviewsTrack.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
-  }
-
-  prevButton.addEventListener("click", function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
-  });
-
-  nextButton.addEventListener("click", function () {
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateSlider();
-    }
   });
 
   // // Совмещённая логика фильтра и активной кнопки

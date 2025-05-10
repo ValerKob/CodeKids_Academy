@@ -320,3 +320,14 @@ input:checked + .switch-slider:before {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
+/* Аккордеон FAQ */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.accordion-content.active {
+  max-height: 500px; /* достаточно большой для любого контента */
+}

@@ -1265,45 +1265,41 @@
 
         <div class="max-w-3xl mx-auto">
           <!-- FAQ Item 1 -->
-          <div
-            class="dark:bg-gray-800 mb-4 border border-gray-200 rounded-lg faq-item overflow-hidden"
-          >
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden mb-4 dark:bg-gray-800">
             <button
-              class="w-full flex justify-between items-center p-4 text-left focus:outline-none"
+              class="toggle-btn w-full flex justify-between items-center p-4 text-left"
             >
-              <span class="font-medium"
-                >С какого возраста можно начинать обучение?</span
-              >
-              <i
-                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"
-              ></i>
+              <span class="font-medium">С какого возраста можно начинать обучение?</span>
+              <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300 rotate-0"></i>
             </button>
-            <div class="px-4 pb-4 hidden">
-              <p class="text-gray-600 dark:text-gray-100">
-                Мы принимаем детей с 7 лет. Для самых маленьких у нас есть курс
-                Scratch, где программирование изучается через создание
-                мультфильмов и простых игр. Детям постарше (10+) можно начинать
-                с Python или Minecraft-программирования.
+            <div
+              class="toggle-content transition-all duration-500 ease-in-out px-4"
+              style="height: 0; overflow: hidden;"
+            >
+              <p class="py-4 text-gray-600 dark:text-gray-100">
+                Мы принимаем детей с 7 лет. Для самых маленьких у нас есть курс Scratch...
               </p>
             </div>
           </div>
 
           <!-- FAQ Item 2 -->
           <div
-            class="dark:bg-gray-800 mb-4 border border-gray-200 rounded-lg faq-item overflow-hidden"
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden mb-4 dark:bg-gray-800"
           >
             <button
-              class="w-full flex justify-between items-center p-4 text-left focus:outline-none"
+              class="toggle-btn w-full flex justify-between items-center p-4 text-left"
             >
               <span class="font-medium"
                 >Нужен ли ребенку свой компьютер для занятий?</span
               >
               <i
-                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"
+                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300 rotate-0"
               ></i>
             </button>
-            <div class="px-4 pb-4 hidden">
-              <p class="text-gray-600 dark:text-gray-100">
+            <div class="toggle-content transition-all duration-500 ease-in-out px-4"
+              style="height: 0; overflow: hidden;"
+            >
+              <p class="py-4 text-gray-600 dark:text-gray-100">
                 Да, для занятий потребуется компьютер или ноутбук с доступом в
                 интернет. На некоторых курсах (например, Unity или
                 веб-разработка) лучше подойдет устройство с более мощными
@@ -1315,18 +1311,20 @@
 
           <!-- FAQ Item 3 -->
           <div
-            class="dark:bg-gray-800 mb-4 border border-gray-200 rounded-lg faq-item overflow-hidden"
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden mb-4 dark:bg-gray-800"
           >
             <button
-              class="w-full flex justify-between items-center p-4 text-left focus:outline-none"
+              class="toggle-btn w-full flex justify-between items-center p-4 text-left"
             >
               <span class="font-medium">Как проходят занятия?</span>
               <i
-                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"
+                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300 rotate-0"
               ></i>
             </button>
-            <div class="px-4 pb-4 hidden">
-              <p class="text-gray-600 dark:text-gray-100">
+            <div class="toggle-content transition-all duration-500 ease-in-out px-4"
+              style="height: 0; overflow: hidden;"
+            >
+              <p class="py-4 text-gray-600 dark:text-gray-100">
                 Занятия проходят онлайн в Zoom или аналогичных платформах.
                 Группы небольшие (до 6 человек), что позволяет преподавателю
                 уделять внимание каждому ребенку. После каждого урока дается
@@ -1338,11 +1336,11 @@
 
           <!-- FAQ Item 4
                 <div class="mb-4 border border-gray-200 rounded-lg faq-item overflow-hidden">
-                    <button class="w-full flex justify-between items-center p-4 text-left focus:outline-none">
+                    <button class="toggle-btn w-full flex justify-between items-center p-4 text-left">
                         <span class="font-medium">Можно ли получить налоговый вычет за обучение?</span>
-                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300 rotate-0"></i>
                     </button>
-                    <div class="px-4 pb-4 hidden">
+                    <div class="toggle-content transition-all duration-500 ease-in-out px-4">
                         <p class="text-gray-600">
                             Да, наша школа имеет лицензию на образовательную деятельность, поэтому вы можете получить налоговый вычет в размере 13% от стоимости обучения (но не более установленного законом лимита). Мы предоставляем все необходимые документы для налоговой.
                         </p>
@@ -1351,20 +1349,22 @@
 
           <!-- FAQ Item 5 -->
           <div
-            class="dark:bg-gray-800 mb-4 border border-gray-200 rounded-lg faq-item overflow-hidden"
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden mb-4 dark:bg-gray-800"
           >
             <button
-              class="w-full flex justify-between items-center p-4 text-left focus:outline-none"
+              class="toggle-btn w-full flex justify-between items-center p-4 text-left"
             >
               <span class="font-medium"
                 >Что если ребенок пропустил занятие?</span
               >
               <i
-                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"
+                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300 rotate-0"
               ></i>
             </button>
-            <div class="px-4 pb-4 hidden">
-              <p class="text-gray-600 dark:text-gray-100">
+            <div class="toggle-content transition-all duration-500 ease-in-out px-4"
+              style="height: 0; overflow: hidden;"
+            >
+              <p class="py-4 text-gray-600 dark:text-gray-100">
                 Все занятия записываются и доступны в записи в личном кабинете.
                 Если у ребенка возникнут вопросы по пропущенному материалу, он
                 может задать их преподавателю на следующем занятии или в чате
@@ -1375,18 +1375,20 @@
 
           <!-- FAQ Item 6 -->
           <div
-            class="dark:bg-gray-800 mb-4 border border-gray-200 rounded-lg faq-item overflow-hidden"
+            class="faq-item border border-gray-200 rounded-lg overflow-hidden mb-4 dark:bg-gray-800"
           >
             <button
-              class="w-full flex justify-between items-center p-4 text-left focus:outline-none"
+              class="toggle-btn w-full flex justify-between items-center p-4 text-left"
             >
               <span class="font-medium">Какой курс выбрать для начала?</span>
               <i
-                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"
+                class="fas fa-chevron-down text-indigo-600 transition-transform duration-300 rotate-0"
               ></i>
             </button>
-            <div class="px-4 pb-4 hidden">
-              <p class="text-gray-600 dark:text-gray-100">
+            <div class="toggle-content transition-all duration-500 ease-in-out px-4"
+              style="height: 0; overflow: hidden;"
+            >
+              <p class="py-4 text-gray-600 dark:text-gray-100">
                 Выбор курса зависит от возраста и интересов ребенка. Детям 7-10
                 лет рекомендуем начать со Scratch. Если ребенок любит Minecraft
                 или Roblox — соответствующие курсы. Подросткам 12+ можно
