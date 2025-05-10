@@ -73,21 +73,20 @@ menuBtn.addEventListener("click", () => {
 });
 
 // FAQ accordion
-document.querySelectorAll('.toggle-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
+document.querySelectorAll(".toggle-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
     const content = btn.nextElementSibling;
-    const icon = btn.querySelector('i');
+    const icon = btn.querySelector("i");
 
-    if (content.style.height === '0px' || !content.style.height) {
-      content.style.height = content.scrollHeight + 'px';
-      icon.classList.add('rotate-180');
+    if (content.style.height === "0px" || !content.style.height) {
+      content.style.height = content.scrollHeight + "px";
+      icon.classList.add("rotate-180");
     } else {
-      content.style.height = '0';
-      icon.classList.remove('rotate-180');
+      content.style.height = "0";
+      icon.classList.remove("rotate-180");
     }
   });
 });
-
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -258,20 +257,17 @@ const slides = [
   {
     title: "Программирование — суперсила будущего!",
     text: "Современные курсы для детей от 7 до 18 лет. Развиваем мышление и творчество.",
-    image:
-      "./assets/images/main/slider/slider_1.jpg",
+    image: "./assets/images/main/slider/slider_1.jpg",
   },
   {
     title: "Создавай игры и сайты с нуля!",
     text: "Обучение Unity, Python, веб-разработке и многому другому.",
-    image:
-      "./assets/images/main/slider/slider_2.jpg",
+    image: "./assets/images/main/slider/slider_2.jpg",
   },
   {
     title: "Твое IT-будущее начинается здесь!",
     text: "Интерактивные курсы, реальные проекты, поддержка преподавателя.",
-    image:
-      "./assets/images/main/slider/slider_3.jpg",
+    image: "./assets/images/main/slider/slider_3.jpg",
   },
 ];
 
@@ -365,22 +361,86 @@ document.querySelectorAll(".toggle-btn").forEach((btn) => {
 });
 
 // Проверка и установка темы при загрузке страницы
-if (localStorage.getItem('theme') === 'dark') {
-  document.documentElement.classList.add('dark');
+if (localStorage.getItem("theme") === "dark") {
+  document.documentElement.classList.add("dark");
 } else {
-  document.documentElement.classList.remove('dark');
+  document.documentElement.classList.remove("dark");
 }
 
 // Обработчик клика по кнопке смены темы
-document.querySelectorAll('button').forEach(btn => {
-  btn.addEventListener('click', () => {
-      if (btn.querySelector('.fa-moon') || btn.querySelector('.fa-sun')) {
-          document.documentElement.classList.toggle('dark');
-          if (document.documentElement.classList.contains('dark')) {
-              localStorage.setItem('theme', 'dark');
-          } else {
-              localStorage.setItem('theme', 'light');
-          }
+document.querySelectorAll("button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (btn.querySelector(".fa-moon") || btn.querySelector(".fa-sun")) {
+      document.documentElement.classList.toggle("dark");
+      if (document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
       }
+    }
+  });
+});
+
+// Privacy policy
+// Установка текущей даты
+const now = new Date();
+const options = { year: "numeric", month: "long", day: "numeric" };
+document.getElementById("current-date").textContent = now.toLocaleDateString(
+  "ru-RU",
+  options
+);
+// Получаем все ссылки в боковой навигации
+const navLinks = document.querySelectorAll("aside nav a");
+
+// Получаем все секции контента
+const sections = document.querySelectorAll(".section-content");
+
+// Функция для переключения активного раздела
+function switchSection(event) {
+  // Отключаем активный класс у всех ссылок
+  navLinks.forEach((link) => link.classList.remove("active-section"));
+
+  // Добавляем активный класс к текущей ссылке
+  event.target.classList.add("active-section");
+
+  // Скрываем все секции
+  sections.forEach((section) => section.classList.remove("active"));
+
+  // Находим нужную секцию по id из ссылки
+  const sectionId = event.target.getAttribute("href").substring(1);
+  const activeSection = document.getElementById(sectionId);
+
+  // Показываем выбранную секцию
+  activeSection.classList.add("active");
+}
+
+// Добавляем обработчик кликов на все ссылки
+navLinks.forEach((link) => {
+  link.addEventListener("click", switchSection);
+});
+
+// JavaScript для мобильной навигации
+document.getElementById("mobile-nav").addEventListener("change", function () {
+  // Сначала скрываем все секции
+  const sections = document.querySelectorAll(".section-content");
+  sections.forEach((section) => section.classList.remove("active"));
+
+  // Получаем id выбранной секции
+  const selectedSection = this.value;
+
+  // Показываем выбранную секцию
+  const activeSection = document.getElementById(selectedSection);
+  if (activeSection) {
+    activeSection.classList.add("active");
+  }
+
+  // Обновляем стиль активного пункта меню
+  const links = document.querySelectorAll("aside a");
+  links.forEach((link) => {
+    if (link.getAttribute("data-section") === selectedSection) {
+      link.classList.add("active-section");
+    } else {
+      link.classList.remove("active-section");
+    }
   });
 });

@@ -320,3 +320,15 @@ input:checked + .switch-slider:before {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+
+/* Privacy policy */
+.active-section {
+  color: #3b82f6;
+  font-weight: 500;
+}
+.section-content {
+  display: none;
+}
+.section-content.active {
+  display: block;
+}
