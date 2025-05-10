@@ -265,7 +265,7 @@ const slides = [
     title: "Создавай игры и сайты с нуля!",
     text: "Обучение Unity, Python, веб-разработке и многому другому.",
     image:
-      "https://img.freepik.com/free-photo/boys-gaming_23-2148141557.jpg?t=st=1746464262~exp=1746467862~hmac=bc427146e9006c9ae277b75d733ff0b86579aca70e5ec2ad94287d8ceac00070&w=1380",
+      "./assets/images/main/slider/slider_2.jpg",
   },
   {
     title: "Твое IT-будущее начинается здесь!",
