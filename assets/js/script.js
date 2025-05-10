@@ -444,3 +444,31 @@ document.getElementById("mobile-nav").addEventListener("change", function () {
     }
   });
 });
+
+// Contract Offer
+// Accept button
+const acceptBtn = document.getElementById("acceptBtn");
+const acceptanceMessage = document.getElementById("acceptanceMessage");
+
+acceptBtn.addEventListener("click", function () {
+  acceptanceMessage.innerHTML = `
+           <p class="font-semibold"><i class="fas fa-check-circle mr-2"></i> Спасибо!</p>
+           <p>Вы успешно подтвердили ознакомление с договором-офертой.</p>
+       `;
+  acceptanceMessage.classList.remove("hidden");
+
+  // Scroll to message
+  setTimeout(() => {
+    acceptanceMessage.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+});
+
+// Download button
+const downloadBtn = document.getElementById("downloadBtn");
+
+downloadBtn.addEventListener("click", function () {
+  // In a real scenario, this would link to a PDF file
+  alert(
+    "В реальном сценарии здесь будет ссылка на скачивание PDF-версии договора."
+  );
+});
